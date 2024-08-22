@@ -82,7 +82,7 @@ if __name__ == '__main__':
     asyncio.set_event_loop(loop)
     stop_event = asyncio.Event()
 
-    # Configura manipuladores de sinal para encerramento gracioso
+    # Configure signal handlers for graceful shutdown
     for signal_name in {'SIGINT', 'SIGTERM'}:
         loop.add_signal_handler(
             getattr(signal, signal_name),
